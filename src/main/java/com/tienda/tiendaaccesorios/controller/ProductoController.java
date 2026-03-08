@@ -19,13 +19,13 @@ public class ProductoController {
         this.productoRepository = productoRepository;
     }
 
-    // Método para obtener todos los productos registrados
+    // Metodo para obtener todos los productos registrados
     @GetMapping
     public List<Producto> obtenerProductos() {
         return productoRepository.findAll();
     }
 
-    // Método para guardar un nuevo producto
+    // Metodo para guardar un nuevo producto
     @PostMapping
     public Producto guardarProducto(@RequestBody Producto producto) {
         return productoRepository.save(producto);
