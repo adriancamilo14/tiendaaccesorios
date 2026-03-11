@@ -5,6 +5,7 @@ import com.tienda.tiendaaccesorios.repository.UsuarioRepository;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api")
 public class AuthController {
 
