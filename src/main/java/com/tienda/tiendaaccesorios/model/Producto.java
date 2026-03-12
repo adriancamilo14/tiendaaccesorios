@@ -2,29 +2,25 @@ package com.tienda.tiendaaccesorios.model;
 
 import jakarta.persistence.*;
 
-// Esta clase representa la entidad Producto en la base de datos
 @Entity
 @Table(name = "productos")
 public class Producto {
 
-    // Identificador único del producto
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Nombre del producto
     private String nombre;
 
-    // Precio del producto
     private double precio;
 
-    // Cantidad disponible en inventario
+    private int stock;
+
+    private String descripcion;
+
     private int cantidad;
 
-    // Constructor vacío requerido por JPA
-    public Producto() {}
-
-    // Métodos getter y setter para acceder a los atributos
+    public Producto(){}
 
     public Long getId() {
         return id;
@@ -44,6 +40,22 @@ public class Producto {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public int getCantidad() {
